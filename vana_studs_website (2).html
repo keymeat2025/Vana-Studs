@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vana Studs — Horse Riding · Breeding · Boarding | Vellore</title>
+<meta name="description" content="Vana Studs is Vellore's premier indigenous horse riding academy. Offering riding lessons, breeding, boarding and competition coaching since 2009.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+:root {
+  --green: #1B4332;
+  --green2: #2D6A4F;
+  --green3: #40916C;
+  --gold: #C9A84C;
+  --gold2: #E9C46A;
+  --white: #FFFFFF;
+  --off: #F8F6F1;
+  --light: #EEF0EB;
+  --dark: #1A1A1A;
+  --mid: #4A4A4A;
+  --soft: #6B7280;
+  --border: #E5E7EB;
+}
+body { font-family: 'Source Sans 3', sans-serif; background: var(--white); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; }
+button, input, select, textarea { font-family: inherit; }
+
+/* ===== TOP BAR ===== */
+.topbar {
+  background: var(--green);
+  padding: 9px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.topbar-left {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.topbar-left a, .topbar-left span {
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+.topbar-left a:hover { color: var(--gold2); }
+.topbar-right { display: flex; gap: 20px; }
+.topbar-right a {
+  font-size: 12px;
+  color: rgba(255,255,255,0.65);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.topbar-right a:hover { color: var(--gold2); }
+
+/* ===== NAV ===== */
+.nav {
+  background: var(--white);
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 3px solid var(--green);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand-badge {
+  width: 50px; height: 50px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--green);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.brand-sub {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--soft);
+  font-weight: 300;
+}
+.nav-links { display: flex; list-style: none; height: 80px; align-items: stretch; }
+.nav-links li { display: flex; align-items: center; }
+.nav-links a {
+  font-size: 11px; font-weight: 700;
+  color: var(--dark);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0 18px;
+  height: 100%;
+  display: flex; align-items: center;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.nav-links a:hover { color: var(--green); border-bottom-color: var(--green); }
+.nav-book {
+  background: var(--green);
+  color: var(--white);
+  padding: 12px 26px;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none; cursor: pointer;
+  transition: background 0.2s;
+}
+.nav-book:hover { background: var(--green2); }
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  height: 88vh;
+  min-height: 560px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.40);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  text-align: center;
+  padding: 0 6%;
+  max-width: 860px;
+}
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--dark);
+  padding: 7px 20px;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+}
+.hero-h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(52px, 8vw, 88px);
+  line-height: 1.02;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+.hero-h1 em { color: var(--gold2); font-style: italic; font-weight: 700; }
+.hero-sub {
+  font-size: 19px;
+  color: rgba(255,255,255,0.88);
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  max-width: 540px;
+  margin-left: auto; margin-right: auto;
+  line-height: 1.7;
+}
+.hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--green3); color: var(--white);
+  padding: 16px 40px;
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border: none; cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover { background: var(--green2); transform: translateY(-1px); }
+.btn-outline {
+  background: transparent; color: var(--white);
+  padding: 15px 36px;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border: 2px solid rgba(255,255,255,0.65);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+/* ===== STATS BAR ===== */
+.statsbar {
+  background: var(--green);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 4px solid var(--gold);
+}
+.sbar-item {
+  padding: 2rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,0.12);
+}
+.sbar-item:last-child { border: none; }
+.sbar-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 44px; font-weight: 700;
+  color: var(--gold2); line-height: 1;
+  display: block;
+}
+.sbar-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  font-weight: 300; margin-top: 6px;
+  display: block;
+}
+
+/* ===== INTRO / ABOUT ===== */
+.intro {
+  padding: 6rem 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+.overline {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--green3);
+  font-weight: 700;
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 1rem;
+}
+.overline::before {
+  content: '';
+  display: inline-block;
+  width: 32px; height: 2px;
+  background: var(--green3);
+  flex-shrink: 0;
+}
+.section-h {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px; font-weight: 700;
+  color: var(--dark); line-height: 1.12;
+}
+.section-h em { color: var(--green); font-style: italic; }
+.intro-h { font-size: 44px; margin-bottom: 1.25rem; }
+.intro-p { font-size: 16px; color: var(--mid); line-height: 1.8; font-weight: 300; margin-bottom: 1.25rem; }
+.text-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--green); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.text-link:hover { color: var(--green2); border-color: var(--green2); }
+.intro-img-wrap { position: relative; padding-bottom: 30px; padding-left: 0; }
+.intro-img {
+  width: 100%; height: 460px;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+.intro-badge {
+  position: absolute;
+  bottom: 0; left: -10px;
+  background: var(--gold);
+  padding: 1.4rem 1.8rem;
+  z-index: 2;
+}
+.intro-badge .big {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px; font-weight: 700;
+  color: var(--dark); display: block; line-height: 1;
+}
+.intro-badge .small {
+  font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dark); font-weight: 700;
+  display: block; margin-top: 5px;
+}
+
+/* ===== SERVICES ===== */
+.services { background: var(--off); padding: 6rem 5%; }
+.section-header { text-align: center; margin-bottom: 4rem; }
+.section-overline {
+  font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--green3);
+  font-weight: 700; display: block; margin-bottom: 0.75rem;
+}
+.section-sub {
+  font-size: 16px; color: var(--soft); font-weight: 300;
+  margin-top: 0.75rem; max-width: 520px;
+  margin-left: auto; margin-right: auto;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--border);
+}
+.card {
+  background: var(--white);
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+  cursor: default;
+}
+.card:last-child { border-right: none; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(0,0,0,0.12); position: relative; z-index: 2; }
+.card-img-wrap { position: relative; height: 200px; overflow: hidden; background: var(--green2); }
+.card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.45s; }
+.card:hover .card-img { transform: scale(1.06); }
+.card-icon-fallback {
+  width: 100%; height: 100%;
+  display: none;
+  align-items: center; justify-content: center;
+  background: var(--green);
+}
+.card-icon-fallback i { font-size: 60px; color: rgba(255,255,255,0.22); }
+.card-body { padding: 1.5rem; }
+.card-icon-bar {
+  width: 40px; height: 40px;
+  background: var(--green);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1rem;
+}
+.card-icon-bar i { color: var(--white); font-size: 20px; }
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--dark); margin-bottom: 0.5rem;
+}
+.card-desc { font-size: 13px; color: var(--soft); line-height: 1.75; font-weight: 300; margin-bottom: 1rem; }
+.card-link {
+  font-size: 12px; font-weight: 700;
+  color: var(--green);
+  letter-spacing: 0.06em; text-transform: uppercase;
+  display: flex; align-items: center; gap: 6px;
+}
+.card-link i { font-size: 14px; }
+
+/* ===== PHOTO STRIP ===== */
+.photo-strip {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  height: 400px;
+  gap: 3px;
+}
+.ps-item { position: relative; overflow: hidden; background: var(--green2); }
+.ps-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
+.ps-item:hover img { transform: scale(1.05); }
+.ps-icon-bg {
+  width: 100%; height: 100%;
+  display: none;
+  align-items: center; justify-content: center;
+}
+.ps-icon-bg i { font-size: 80px; color: rgba(255,255,255,0.2); }
+.ps-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.72));
+  padding: 2.5rem 1.5rem 1.25rem;
+}
+.ps-label h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--white); margin-bottom: 3px;
+}
+.ps-label p { font-size: 12px; color: rgba(255,255,255,0.75); font-weight: 300; }
+
+/* ===== PRICING ===== */
+.pricing { padding: 6rem 5%; background: var(--white); }
+.pricing-inner {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+.pricing-left .section-h { font-size: 40px; text-align: left; margin-bottom: 1rem; }
+.pricing-left p { font-size: 15px; color: var(--soft); font-weight: 300; line-height: 1.8; margin-bottom: 1.5rem; }
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border);
+}
+.plan {
+  background: var(--white);
+  padding: 2rem 1.5rem;
+  border-right: 1px solid var(--border);
+  position: relative;
+}
+.plan:last-child { border-right: none; }
+.plan-featured { background: var(--green); }
+.plan-popular {
+  position: absolute; top: 0; left: 0; right: 0;
+  background: var(--gold);
+  padding: 5px;
+  text-align: center;
+  font-size: 9px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 700;
+  color: var(--dark);
+}
+.plan-tag {
+  font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; font-weight: 700;
+  color: var(--green3); display: block; margin-bottom: 0.75rem;
+}
+.plan-featured .plan-tag { color: var(--gold2); }
+.plan-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--dark); margin-bottom: 0.25rem;
+}
+.plan-featured .plan-name { color: var(--white); }
+.plan-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px; font-weight: 700;
+  color: var(--green); line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.plan-price sup { font-size: 22px; vertical-align: super; }
+.plan-featured .plan-price { color: var(--gold2); }
+.plan-period { font-size: 12px; color: var(--soft); margin-bottom: 1.5rem; font-weight: 300; }
+.plan-featured .plan-period { color: rgba(255,255,255,0.5); }
+.plan-list { list-style: none; margin-bottom: 2rem; }
+.plan-list li {
+  font-size: 13px; padding: 7px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: var(--mid);
+  display: flex; gap: 8px; align-items: flex-start;
+  font-weight: 300;
+}
+.plan-featured .plan-list li { border-color: rgba(255,255,255,0.1); color: rgba(255,255,255,0.82); }
+.plan-list li i { color: var(--green3); font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+.plan-featured .plan-list li i { color: var(--gold2); }
+.plan-cta {
+  display: block; width: 100%;
+  padding: 13px; text-align: center;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--off); color: var(--dark);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.plan-cta:hover { background: var(--green); color: var(--white); border-color: var(--green); }
+.plan-featured .plan-cta { background: var(--gold); color: var(--dark); border: none; }
+.plan-featured .plan-cta:hover { background: var(--gold2); }
+
+/* ===== TESTIMONIALS ===== */
+.testi-section { background: var(--light); padding: 6rem 5%; }
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; margin-top: 3.5rem;
+}
+.testi-card {
+  background: var(--white);
+  padding: 2.5rem;
+  border-top: 4px solid var(--green);
+  position: relative;
+}
+.testi-q {
+  font-size: 80px; line-height: 0.6;
+  color: var(--green); opacity: 0.12;
+  font-family: 'Playfair Display', serif;
+  position: absolute; top: 1.5rem; right: 1.5rem;
+}
+.testi-stars { color: var(--gold); font-size: 14px; letter-spacing: 3px; margin-bottom: 1rem; }
+.testi-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px; font-style: italic;
+  color: var(--dark); line-height: 1.78;
+  margin-bottom: 1.5rem;
+}
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-av {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--green);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white); font-size: 14px; font-weight: 700;
+  flex-shrink: 0;
+}
+.testi-name { font-size: 14px; font-weight: 600; color: var(--dark); }
+.testi-loc { font-size: 12px; color: var(--soft); font-weight: 300; }
+
+/* ===== CONTACT ===== */
+.contact-section { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; }
+.contact-left { position: relative; overflow: hidden; background: var(--green2); }
+.contact-left img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.5; }
+.contact-left-fallback {
+  width: 100%; height: 100%;
+  display: none; align-items: center; justify-content: center;
+}
+.contact-left-fallback i { font-size: 120px; color: rgba(255,255,255,0.15); }
+.contact-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  justify-content: center;
+  padding: 4rem 3rem;
+}
+.contact-overlay h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; font-weight: 700;
+  color: var(--white); margin-bottom: 2rem;
+}
+.ci { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 1.25rem; }
+.ci-icon {
+  width: 38px; height: 38px;
+  background: rgba(255,255,255,0.12);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.ci-icon i { color: var(--gold2); font-size: 16px; }
+.ci-label {
+  font-size: 10px; letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold2); display: block;
+  font-weight: 700; margin-bottom: 3px;
+}
+.ci-val { font-size: 14px; color: rgba(255,255,255,0.85); font-weight: 300; line-height: 1.55; }
+.contact-right { padding: 5rem 4rem; background: var(--off); }
+.contact-right .section-h { font-size: 36px; text-align: left; margin-bottom: 0.5rem; }
+.contact-right > p { font-size: 14px; color: var(--soft); font-weight: 300; margin-bottom: 2rem; margin-top: 0.5rem; }
+.f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+.field { margin-bottom: 14px; }
+.field input, .field select, .field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  font-size: 14px; font-weight: 300;
+  color: var(--dark);
+  outline: none;
+  transition: border-color 0.2s;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--green); }
+.field input::placeholder, .field textarea::placeholder { color: #9CA3AF; }
+.field textarea { resize: vertical; min-height: 100px; }
+.submit-btn {
+  background: var(--green); color: var(--white);
+  width: 100%; padding: 16px;
+  font-size: 13px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  border: none; cursor: pointer;
+  transition: background 0.2s;
+}
+.submit-btn:hover { background: var(--green2); }
+
+/* ===== FOOTER ===== */
+.footer { background: var(--dark); }
+.footer-top {
+  padding: 4.5rem 5%;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px; color: var(--white); font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.footer-brand-tagline {
+  font-size: 12px; color: rgba(255,255,255,0.35);
+  font-weight: 300; letter-spacing: 0.04em;
+  margin-bottom: 1.5rem; line-height: 1.7;
+}
+.footer-social { display: flex; gap: 10px; }
+.soc {
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background 0.2s;
+  border: none;
+}
+.soc:hover { background: var(--green3); }
+.soc i { color: var(--white); font-size: 16px; }
+.footer-col h4 {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--white); margin-bottom: 1.1rem;
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 9px; }
+.footer-col a {
+  font-size: 13px; color: rgba(255,255,255,0.42);
+  font-weight: 300; transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--gold2); }
+.footer-bottom {
+  padding: 1.5rem 5%;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.28); font-weight: 300; }
+.footer-badge {
+  background: var(--gold); color: var(--dark);
+  padding: 5px 16px;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.wa-float {
+  position: fixed; bottom: 28px; right: 28px;
+  width: 56px; height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+  cursor: pointer;
+  z-index: 999;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+.wa-float:hover { transform: scale(1.08); box-shadow: 0 6px 24px rgba(0,0,0,0.28); }
+.wa-float i { color: #fff; font-size: 28px; }
+.wa-tooltip {
+  position: fixed; bottom: 36px; right: 94px;
+  background: var(--dark); color: var(--white);
+  padding: 7px 14px; font-size: 12px; font-weight: 600;
+  white-space: nowrap; z-index: 998;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s;
+}
+.wa-float:hover ~ .wa-tooltip { opacity: 1; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-content > * { animation: fadeUp 0.9s ease both; }
+.hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.28s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.46s; }
+.hero-content > *:nth-child(4) { animation-delay: 0.6s; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .cards-grid { grid-template-columns: 1fr 1fr; }
+  .card:nth-child(2) { border-right: none; }
+  .card:nth-child(3) { border-top: 1px solid var(--border); }
+  .card:nth-child(4) { border-right: none; border-top: 1px solid var(--border); }
+  .intro { grid-template-columns: 1fr; gap: 3rem; }
+  .pricing-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+  .plans { grid-template-columns: 1fr; }
+  .plan { border-right: none; border-bottom: 1px solid var(--border); }
+  .plan:last-child { border-bottom: none; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .contact-section { grid-template-columns: 1fr; }
+  .contact-left { min-height: 360px; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  .photo-strip { grid-template-columns: 1fr; height: auto; }
+  .ps-item { height: 260px; }
+  .statsbar { grid-template-columns: 1fr 1fr; }
+  .sbar-item:nth-child(2) { border-right: none; }
+}
+@media (max-width: 600px) {
+  .nav-links { display: none; }
+  .hero-h1 { font-size: 44px; }
+  .intro-badge { left: 0; }
+  .footer-top { grid-template-columns: 1fr; }
+  .f-row { grid-template-columns: 1fr; }
+  .topbar-right { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a class="wa-float" href="https://wa.me/919876543210" target="_blank" aria-label="Chat on WhatsApp">
+  <i class="ti ti-brand-whatsapp"></i>
+</a>
+<div class="wa-tooltip">Chat on WhatsApp</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="tel:+919876543210"><i class="ti ti-phone"></i> +91 98765 43210</a>
+    <a href="mailto:hello@vanastuds.in"><i class="ti ti-mail"></i> hello@vanastuds.in</a>
+    <span><i class="ti ti-clock"></i> Mon–Sat 6 AM–7 PM &nbsp;·&nbsp; Sun 7 AM–1 PM</span>
+  </div>
+  <div class="topbar-right">
+    <a href="https://www.instagram.com/vana_studs/" target="_blank"><i class="ti ti-brand-instagram"></i> Instagram</a>
+    <a href="https://facebook.com" target="_blank"><i class="ti ti-brand-facebook"></i> Facebook</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="brand">
+    <div class="brand-badge">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <ellipse cx="14" cy="19" rx="9" ry="4" fill="#E9C46A" opacity="0.35"/>
+        <path d="M7 18Q6 13 8 11Q10 9 12 10L17 9Q20 8 21 11Q22 13 20 15L19 18Z" fill="#E9C46A"/>
+        <path d="M16 9Q18 6 20 5Q21 8 19 9Z" fill="white" opacity="0.7"/>
+        <path d="M7 17Q4 15 3 13Q4 16 6 17Z" fill="white" opacity="0.5"/>
+      </svg>
+    </div>
+    <div>
+      <div class="brand-name">Vana Studs</div>
+      <div class="brand-sub">Horse Riding · Breeding · Boarding</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-book" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Session</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <img class="hero-bg"
+    src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=1600&q=85&fit=crop"
+    alt="Two riders on horseback at Vana Studs, Vellore"
+    onerror="this.style.display='none'">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-kicker"><i class="ti ti-map-pin"></i> Vellore's Indigenous Horse Academy — Est. 2009</div>
+    <h1 class="hero-h1">For the <em>feeling.</em></h1>
+    <p class="hero-sub">There's no feeling quite like it — the trust, the rhythm, the freedom. Discover it at Vana Studs, Vellore.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Session</button>
+      <button class="btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Explore Services</button>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="statsbar">
+  <div class="sbar-item">
+    <span class="sbar-num">15</span>
+    <span class="sbar-label">Years of Excellence</span>
+  </div>
+  <div class="sbar-item">
+    <span class="sbar-num">40+</span>
+    <span class="sbar-label">Resident Horses</span>
+  </div>
+  <div class="sbar-item">
+    <span class="sbar-num">500+</span>
+    <span class="sbar-label">Riders Trained</span>
+  </div>
+  <div class="sbar-item">
+    <span class="sbar-num">8</span>
+    <span class="sbar-label">Certified Trainers</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="intro" id="about">
+  <div>
+    <div class="overline">About Vana Studs</div>
+    <h2 class="section-h intro-h">Rooted in Tamil Nadu's <em>Equestrian Heritage</em></h2>
+    <p class="intro-p">Founded in 2009 on the outskirts of Vellore, Vana Studs was born from a deep love for India's indigenous horse breeds. What started as a small riding school has grown into a full equestrian academy — breeding, boarding, and training riders of all ages.</p>
+    <p class="intro-p">We are one of the few centres in Tamil Nadu that actively preserves native horse lineages while offering internationally-aligned training programs for beginners and advanced riders alike.</p>
+    <a class="text-link" href="#contact">Book a visit <i class="ti ti-arrow-right"></i></a>
+  </div>
+  <div class="intro-img-wrap">
+    <img class="intro-img"
+      src="https://images.unsplash.com/photo-1612225330653-4ea8f72a86e8?w=900&auto=format&fit=crop&q=85"
+      alt="Trainer bonding with horse at Vana Studs"
+      onerror="this.src='https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?w=900';this.onerror=null">
+    <div class="intro-badge">
+      <span class="big">Est.</span>
+      <span class="big">2009</span>
+      <span class="small">Vellore, Tamil Nadu</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-header">
+    <span class="section-overline">What we offer</span>
+    <h2 class="section-h">Our <em>Disciplines</em></h2>
+    <p class="section-sub">From your very first ride to competition-level coaching — a program crafted for every stage of your journey.</p>
+  </div>
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-img-wrap">
+        <img class="card-img"
+          src="https://images.unsplash.com/photo-1690112328825-be43dcc08a6e?w=600&auto=format&fit=crop&q=85"
+          alt="Horse riding lesson"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-icon-fallback"><i class="ti ti-horse"></i></div>
+      </div>
+      <div class="card-body">
+        <div class="card-icon-bar"><i class="ti ti-horse"></i></div>
+        <div class="card-title">Horse Riding</div>
+        <p class="card-desc">Beginner to advanced lessons in private and group formats. Certified trainers, structured monthly progress tracking.</p>
+        <div class="card-link">Learn more <i class="ti ti-arrow-right"></i></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-wrap">
+        <img class="card-img"
+          src="https://plus.unsplash.com/premium_photo-1661823534652-42baa4a9bda9?fm=jpg&q=85&w=600&auto=format&fit=crop"
+          alt="Horse breeding program"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-icon-fallback"><i class="ti ti-dna"></i></div>
+      </div>
+      <div class="card-body">
+        <div class="card-icon-bar"><i class="ti ti-dna"></i></div>
+        <div class="card-title">Breeding</div>
+        <p class="card-desc">Preserving Tamil Nadu's indigenous horse breeds through ethical, heritage-first breeding and documented lineage records.</p>
+        <div class="card-link">Learn more <i class="ti ti-arrow-right"></i></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-wrap">
+        <img class="card-img"
+          src="https://images.unsplash.com/photo-1566068256639-2f046b164a98?fm=jpg&q=85&w=600&auto=format&fit=crop"
+          alt="Horse boarding and stabling"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-icon-fallback"><i class="ti ti-building"></i></div>
+      </div>
+      <div class="card-body">
+        <div class="card-icon-bar"><i class="ti ti-building"></i></div>
+        <div class="card-title">Boarding & Stabling</div>
+        <p class="card-desc">Full-board stabling with daily grooming, personalised nutrition, fortnightly vet checks, and regular exercise routines.</p>
+        <div class="card-link">Learn more <i class="ti ti-arrow-right"></i></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-wrap">
+        <img class="card-img"
+          src="https://images.unsplash.com/photo-1594768816441-1dd241ffaa67?w=600&auto=format&fit=crop&q=85"
+          alt="Competition coaching"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-icon-fallback"><i class="ti ti-trophy"></i></div>
+      </div>
+      <div class="card-body">
+        <div class="card-icon-bar"><i class="ti ti-trophy"></i></div>
+        <div class="card-title">Competition Coaching</div>
+        <p class="card-desc">Advanced dressage, show jumping and endurance training — we've coached riders to state and national-level competitions.</p>
+        <div class="card-link">Learn more <i class="ti ti-arrow-right"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <div class="ps-item">
+    <img src="https://images.unsplash.com/photo-1612225330565-f79af9f92168?fm=jpg&q=85&w=900&auto=format&fit=crop"
+      alt="Vana Studs horse herd"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="ps-icon-bg"><i class="ti ti-horse"></i></div>
+    <div class="ps-label"><h4>Our Herd</h4><p>40+ horses — indigenous breeds at heart</p></div>
+  </div>
+  <div class="ps-item">
+    <img src="https://images.unsplash.com/photo-1726209431921-71cb661b4dbf?w=600&auto=format&fit=crop&q=85"
+      alt="Riding arena"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="ps-icon-bg"><i class="ti ti-layout-grid"></i></div>
+    <div class="ps-label"><h4>The Arenas</h4><p>Open and covered riding grounds</p></div>
+  </div>
+  <div class="ps-item">
+    <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=600&q=85&fit=crop&crop=center"
+      alt="Our trainers"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="ps-icon-bg"><i class="ti ti-users"></i></div>
+    <div class="ps-label"><h4>Our Trainers</h4><p>8 certified equestrian coaches</p></div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="pricing-inner">
+    <div class="pricing-left">
+      <span class="section-overline">Transparent pricing</span>
+      <h2 class="section-h" style="font-size:40px;text-align:left;margin-bottom:1rem">Choose Your <em>Plan</em></h2>
+      <p>Every rider's journey is different. All plans include certified trainer supervision, safety gear, and a post-session review. No hidden charges, ever.</p>
+      <a class="text-link" href="#contact">Get in touch <i class="ti ti-arrow-right"></i></a>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <span class="plan-tag">Beginner</span>
+        <div class="plan-name">Single Ride</div>
+        <div class="plan-price"><sup>₹</sup>1,200</div>
+        <div class="plan-period">per session · 45 minutes</div>
+        <ul class="plan-list">
+          <li><i class="ti ti-check"></i>One-on-one guided ride</li>
+          <li><i class="ti ti-check"></i>Certified trainer</li>
+          <li><i class="ti ti-check"></i>Safety gear included</li>
+          <li><i class="ti ti-check"></i>All ages from 6+</li>
+        </ul>
+        <button class="plan-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Now</button>
+      </div>
+      <div class="plan plan-featured" style="padding-top:2.8rem">
+        <div class="plan-popular">Most Popular</div>
+        <span class="plan-tag">Best Value</span>
+        <div class="plan-name">Monthly Pass</div>
+        <div class="plan-price"><sup>₹</sup>7,500</div>
+        <div class="plan-period">per month · 8 sessions</div>
+        <ul class="plan-list">
+          <li><i class="ti ti-check"></i>8 sessions per month</li>
+          <li><i class="ti ti-check"></i>Dedicated trainer</li>
+          <li><i class="ti ti-check"></i>Monthly progress report</li>
+          <li><i class="ti ti-check"></i>Weekend group rides</li>
+          <li><i class="ti ti-check"></i>Priority booking</li>
+        </ul>
+        <button class="plan-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
+      </div>
+      <div class="plan">
+        <span class="plan-tag">Full Care</span>
+        <div class="plan-name">Boarding</div>
+        <div class="plan-price"><sup>₹</sup>18K</div>
+        <div class="plan-period">per month · full board</div>
+        <ul class="plan-list">
+          <li><i class="ti ti-check"></i>Premium stabling</li>
+          <li><i class="ti ti-check"></i>Daily grooming</li>
+          <li><i class="ti ti-check"></i>Fortnightly vet check</li>
+          <li><i class="ti ti-check"></i>Exercise and turnout</li>
+        </ul>
+        <button class="plan-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Enquire Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section">
+  <div class="section-header">
+    <span class="section-overline">Rider stories</span>
+    <h2 class="section-h">What Our <em>Community</em> Says</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-q">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Vana Studs gave my daughter not just riding skills but a love for horses that will last her whole life. The trainers are truly extraordinary."</p>
+      <div class="testi-author">
+        <div class="testi-av">PR</div>
+        <div><div class="testi-name">Priya Rajan</div><div class="testi-loc">Vellore · Riding since 2021</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-q">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"I started at 42 with zero experience. In three months I was cantering confidently. The patience and expertise here is simply unmatched."</p>
+      <div class="testi-author">
+        <div class="testi-av">AS</div>
+        <div><div class="testi-name">Arjun Subramanian</div><div class="testi-loc">Chennai · Monthly Pass member</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-q">"</div>
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"Our horses have been boarded here for two years. The genuine care, the facilities, the love for animals — Vana Studs is exceptional."</p>
+      <div class="testi-author">
+        <div class="testi-av">MI</div>
+        <div><div class="testi-name">Meenakshi Iyer</div><div class="testi-loc">Katpadi · Boarding client</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-section">
+    <div class="contact-left">
+      <img src="https://images.unsplash.com/photo-1450052590821-8bf91254a353?w=800&q=80&fit=crop&crop=center"
+        alt="Vana Studs farm surroundings in Vellore"
+        onerror="this.style.display='none';this.parentElement.querySelector('.contact-left-fallback').style.display='flex'">
+      <div class="contact-left-fallback"><i class="ti ti-map-pin"></i></div>
+      <div class="contact-overlay">
+        <h3>Find Us in Vellore</h3>
+        <div class="ci">
+          <div class="ci-icon"><i class="ti ti-map-pin"></i></div>
+          <div><span class="ci-label">Address</span><span class="ci-val">Old Katpadi Road, Vellore<br>Tamil Nadu — 632 001</span></div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon"><i class="ti ti-phone"></i></div>
+          <div><span class="ci-label">Phone</span><span class="ci-val">+91 98765 43210</span></div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon"><i class="ti ti-mail"></i></div>
+          <div><span class="ci-label">Email</span><span class="ci-val">hello@vanastuds.in</span></div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon"><i class="ti ti-clock"></i></div>
+          <div><span class="ci-label">Hours</span><span class="ci-val">Mon–Sat: 6:00 AM – 7:00 PM<br>Sunday: 7:00 AM – 1:00 PM</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-right">
+      <span class="section-overline">Get in touch</span>
+      <h2 class="section-h">Book a <em>Session</em></h2>
+      <p>Our team will get back to you within 24 hours to confirm your booking.</p>
+      <div class="f-row">
+        <div class="field"><input type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="field"><input type="tel" placeholder="Phone number" autocomplete="tel"></div>
+      </div>
+      <div class="field"><input type="email" placeholder="Email address" autocomplete="email"></div>
+      <div class="field">
+        <select>
+          <option value="" disabled selected>Select a service</option>
+          <option>Horse Riding — Beginner</option>
+          <option>Horse Riding — Monthly Pass</option>
+          <option>Competition Coaching</option>
+          <option>Boarding & Stabling</option>
+          <option>Breeding Program</option>
+          <option>General Enquiry</option>
+        </select>
+      </div>
+      <div class="field"><textarea placeholder="Tell us about yourself or your horse…" rows="4"></textarea></div>
+      <button class="submit-btn">Send Enquiry</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+<!-- INSTAGRAM REELS SECTION -->
+<section style="background:#F8F6F1;padding:5rem 5%">
+  <div style="text-align:center;margin-bottom:3rem">
+    <span style="font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#40916C;font-weight:700;display:block;margin-bottom:0.75rem">Follow Our Journey</span>
+    <h2 style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#1A1A1A;line-height:1.1">Live from <em style="color:#1B4332;font-style:italic">the Stables</em></h2>
+    <p style="font-size:15px;color:#6B7280;font-weight:300;margin-top:0.75rem;max-width:480px;margin-left:auto;margin-right:auto">Watch our horses, trainers and riders in action — straight from our Instagram.</p>
+  </div>
+
+  <!-- Reels Grid -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:960px;margin:0 auto">
+
+    <!-- Reel 1 -->
+    <div style="background:#fff;border:1px solid #E5E7EB;overflow:hidden">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/reel/DV1FAROk_oU/"
+        data-instgrm-version="14"
+        style="background:#FFF;border:0;margin:0;max-width:100%;min-width:100%;padding:0;width:100%">
+        <div style="padding:16px">
+          <a href="https://www.instagram.com/reel/DV1FAROk_oU/" target="_blank"
+            style="display:flex;align-items:center;gap:10px;text-decoration:none">
+            <div style="width:40px;height:40px;border-radius:50%;background:#1B4332;display:flex;align-items:center;justify-content:center">
+              <i class="ti ti-brand-instagram" style="color:#E9C46A;font-size:20px"></i>
+            </div>
+            <div>
+              <p style="font-size:14px;font-weight:700;color:#1A1A1A;margin:0">vana_studs</p>
+              <p style="font-size:12px;color:#6B7280;margin:0;font-weight:300">View on Instagram</p>
+            </div>
+          </a>
+        </div>
+      </blockquote>
+    </div>
+
+    <!-- Reel 2 - profile link -->
+    <div style="background:#fff;border:1px solid #E5E7EB;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:300px;padding:2rem;text-align:center">
+      <div style="width:64px;height:64px;border-radius:50%;background:#1B4332;display:flex;align-items:center;justify-content:center;margin-bottom:1rem">
+        <i class="ti ti-brand-instagram" style="color:#E9C46A;font-size:30px"></i>
+      </div>
+      <p style="font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:#1A1A1A;margin-bottom:0.5rem">@vana_studs</p>
+      <p style="font-size:13px;color:#6B7280;font-weight:300;margin-bottom:1.5rem;line-height:1.6">Follow us for daily horse content, training videos and behind-the-scenes from our stables.</p>
+      <a href="https://www.instagram.com/vana_studs/" target="_blank"
+        style="background:#1B4332;color:#fff;padding:12px 28px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;display:inline-block;transition:background 0.2s">
+        Follow on Instagram
+      </a>
+    </div>
+
+    <!-- Reel 3 - stats -->
+    <div style="background:#1B4332;border:1px solid #1B4332;overflow:hidden;display:flex;flex-direction:column;justify-content:center;padding:2.5rem 2rem;gap:1.5rem">
+      <div style="border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:1.5rem">
+        <span style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#E9C46A;display:block;line-height:1">500+</span>
+        <span style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:300">Happy Riders</span>
+      </div>
+      <div style="border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:1.5rem">
+        <span style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#E9C46A;display:block;line-height:1">40+</span>
+        <span style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:300">Resident Horses</span>
+      </div>
+      <div>
+        <span style="font-family:'Playfair Display',serif;font-size:42px;font-weight:700;color:#E9C46A;display:block;line-height:1">15</span>
+        <span style="font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:300">Years of Excellence</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Instagram CTA strip -->
+  <div style="margin-top:2.5rem;text-align:center">
+    <a href="https://www.instagram.com/vana_studs/" target="_blank"
+      style="display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid #E5E7EB;padding:14px 32px;font-size:13px;font-weight:700;color:#1A1A1A;text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:all 0.2s">
+      <i class="ti ti-brand-instagram" style="font-size:18px;color:#1B4332"></i>
+      View All Reels on @vana_studs
+      <i class="ti ti-arrow-right" style="font-size:14px;color:#1B4332"></i>
+    </a>
+  </div>
+</section>
+
+<!-- Instagram embed script -->
+<script async src="//www.instagram.com/embed.js"></script>
+
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">Vana Studs</div>
+      <div class="footer-brand-tagline">Horse Riding · Breeding · Boarding<br>Vellore's Indigenous Horse Academy · Est. 2009</div>
+      <div class="footer-social">
+        <a class="soc" href="https://www.instagram.com/vana_studs/" target="_blank" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+        <a class="soc" href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+        <a class="soc" href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+        <a class="soc" href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Horse Riding</a></li>
+        <li><a href="#services">Breeding Program</a></li>
+        <li><a href="#services">Boarding & Stabling</a></li>
+        <li><a href="#services">Competition Coaching</a></li>
+        <li><a href="#contact">Corporate Events</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Academy</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#about">Our Trainers</a></li>
+        <li><a href="#about">Our Horses</a></li>
+        <li><a href="#services">Gallery</a></li>
+        <li><a href="#contact">News & Events</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit Us</h4>
+      <ul>
+        <li><a href="https://maps.google.com" target="_blank">Old Katpadi Road</a></li>
+        <li><a href="https://maps.google.com" target="_blank">Vellore, TN 632 001</a></li>
+        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><a href="mailto:hello@vanastuds.in">hello@vanastuds.in</a></li>
+        <li><a href="https://maps.google.com" target="_blank">Get Directions →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Vana Studs. All rights reserved. · Vellore, Tamil Nadu</div>
+    <div class="footer-badge">Est. 2009</div>
+  </div>
+</footer>
+
+</body>
+</html>
